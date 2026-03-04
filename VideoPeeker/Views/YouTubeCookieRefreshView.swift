@@ -7,9 +7,11 @@
 
 import SwiftUI
 import WebKit
+import Combine
 
 @MainActor
 final class YouTubeCookieRefreshSession: ObservableObject {
+    let objectWillChange = ObservableObjectPublisher()
     let dataStore: WKWebsiteDataStore
     let webView: WKWebView
     

@@ -78,7 +78,7 @@ struct ContentView: View {
                     consoleLogsView
                 }
             }
-            .navigationTitle("Video Peek")
+            .navigationTitle("Video Peeker")
             .navigationDestination(item: $selectedMediaItem) { item in
                 let shouldAutoTranscribe = autoTranscribeImportedIdentifier == item.importedItemIdentifier
                 MediaItemDetailView(
