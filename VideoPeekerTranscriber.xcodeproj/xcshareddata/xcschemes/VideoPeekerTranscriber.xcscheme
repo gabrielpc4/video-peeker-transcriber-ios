@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9BA771D72F3D8C87008270A1"
-               BuildableName = "VideoPeeker.app"
-               BlueprintName = "VideoPeeker"
-               ReferencedContainer = "container:VideoPeeker.xcodeproj">
+               BuildableName = "VideoPeekerTranscriber.app"
+               BlueprintName = "VideoPeekerTranscriber"
+               ReferencedContainer = "container:VideoPeekerTranscriber.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,23 +45,11 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9BA771D72F3D8C87008270A1"
-            BuildableName = "VideoPeeker.app"
-            BlueprintName = "VideoPeeker"
-            ReferencedContainer = "container:VideoPeeker.xcodeproj">
+            BuildableName = "VideoPeekerTranscriber.app"
+            BlueprintName = "VideoPeekerTranscriber"
+            ReferencedContainer = "container:VideoPeekerTranscriber.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "VIDEOPEEKER_BACKEND_BASE_URL"
-            value = "http://127.0.0.1:8000"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "VIDEOPEEKER_FORCE_BACKEND_BASE_URL"
-            value = "1"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -74,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9BA771D72F3D8C87008270A1"
-            BuildableName = "VideoPeeker.app"
-            BlueprintName = "VideoPeeker"
-            ReferencedContainer = "container:VideoPeeker.xcodeproj">
+            BuildableName = "VideoPeekerTranscriber.app"
+            BlueprintName = "VideoPeekerTranscriber"
+            ReferencedContainer = "container:VideoPeekerTranscriber.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

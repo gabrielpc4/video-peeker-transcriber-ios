@@ -1,6 +1,6 @@
 //
 //  SettingsView.swift
-//  VideoPeeker
+//  VideoPeekerTranscriber
 //
 //  Created by Gabriel Pinheiro de Carvalho on 12/02/26.
 //

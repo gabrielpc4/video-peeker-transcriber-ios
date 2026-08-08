@@ -1,6 +1,6 @@
 //
-//  VideoPeekerApp.swift
-//  VideoPeeker
+//  VideoPeekerTranscriberApp.swift
+//  VideoPeekerTranscriber
 //
 //  Created by Gabriel Pinheiro de Carvalho on 12/02/26.
 //
@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 @main
-struct VideoPeekerApp: App {
+struct VideoPeekerTranscriberApp: App {
     private let modelContainer: ModelContainer
 
     init() {
@@ -25,7 +25,7 @@ struct VideoPeekerApp: App {
             guard let containerUrl = FileManager.default.containerURL(
                 forSecurityApplicationGroupIdentifier: AppGroupConstants.appGroupIdentifier
             ) else {
-                throw NSError(domain: "VideoPeekerApp", code: 1, userInfo: [NSLocalizedDescriptionKey: "Missing App Group container URL."])
+                throw NSError(domain: "VideoPeekerTranscriberApp", code: 1, userInfo: [NSLocalizedDescriptionKey: "Missing App Group container URL."])
             }
 
             let appSupportUrl = containerUrl.appendingPathComponent("Library/Application Support", isDirectory: true)
@@ -38,7 +38,7 @@ struct VideoPeekerApp: App {
             // Fallback to default container if App Group is misconfigured.
             // This should be rare, but avoids a hard crash.
             modelContainer = try! ModelContainer(for: MediaItem.self)
-            print("[VideoPeeker] Failed to create AppGroup SwiftData store: \(error.localizedDescription)")
+            print("[VideoPeekerTranscriber] Failed to create AppGroup SwiftData store: \(error.localizedDescription)")
         }
     }
 

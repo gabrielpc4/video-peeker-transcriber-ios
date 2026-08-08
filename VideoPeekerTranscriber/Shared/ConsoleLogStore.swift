@@ -1,6 +1,6 @@
 //
 //  ConsoleLogStore.swift
-//  VideoPeeker
+//  VideoPeekerTranscriber
 //
 //  Captures stdout/stderr so logs are viewable in-app.
 //

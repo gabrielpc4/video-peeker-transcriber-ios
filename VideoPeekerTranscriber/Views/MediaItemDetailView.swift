@@ -1,6 +1,6 @@
 //
 //  MediaItemDetailView.swift
-//  VideoPeeker
+//  VideoPeekerTranscriber
 //
 //  Created by Gabriel Pinheiro de Carvalho on 12/02/26.
 //
@@ -662,7 +662,7 @@ struct MediaItemDetailView: View {
         func log(_ message: String) {
             let ms = Int(Date().timeIntervalSince(startedAt) * 1000)
             let remoteId = (mediaItem.remoteItemIdentifier ?? mediaItem.importedItemIdentifier)
-            print("[VideoPeeker][\(remoteId)] +\(ms)ms \(message)")
+            print("[VideoPeekerTranscriber][\(remoteId)] +\(ms)ms \(message)")
         }
 
         let client = BackendClient(baseUrl: try backendBaseUrl())

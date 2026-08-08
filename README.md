@@ -1,6 +1,6 @@
-# VideoPeeker iOS
+# VideoPeekerTranscriber iOS
 
-App iOS do VideoPeeker para importar links/áudios, enviar para o backend e acompanhar transcrição/resumo/breakdown.
+App iOS do VideoPeekerTranscriber para importar links/áudios, enviar para o backend e acompanhar transcrição/resumo/breakdown.
 
 ## O que o app faz
 
@@ -16,32 +16,32 @@ App iOS do VideoPeeker para importar links/áudios, enviar para o backend e acom
 - iOS 17+ (device ou simulador)
 - Backend do projeto rodando e acessível em rede
 
-Backend separado: [videopeeker-backend](https://github.com/gabrielpc4/videopeeker-backend)
+Backend separado: [video-peeker-transcriber-backend](https://github.com/gabrielpc4/video-peeker-transcriber-backend)
 
 ## Rodando localmente
 
-1. Abra `VideoPeeker.xcodeproj` no Xcode.
-2. Selecione o target `VideoPeeker`.
+1. Abra `VideoPeekerTranscriber.xcodeproj` no Xcode.
+2. Selecione o target `VideoPeekerTranscriber`.
 3. Rode no simulador ou device.
 
 ## Configuração de backend
 
 - URL padrão no app:
-  - `https://videopeeker-backend.onrender.com`
+  - `https://video-peeker-transcriber-backend.onrender.com`
 - Para usar backend local em device físico:
   - abra `Settings` no app
   - ajuste `Base URL` para o IP da sua máquina na mesma rede (ex.: `http://192.168.0.10:8000`)
 
 Também existe suporte por variáveis de ambiente (útil em Schemes):
 
-- `VIDEOPEEKER_BACKEND_BASE_URL`
-- `VIDEOPEEKER_FORCE_BACKEND_BASE_URL` (`1` ou `true`)
+- `VIDEOPEEKERTRANSCRIBER_BACKEND_BASE_URL`
+- `VIDEOPEEKERTRANSCRIBER_FORCE_BACKEND_BASE_URL` (`1` ou `true`)
 
 ## Estrutura
 
-- `VideoPeeker/`: app principal (SwiftUI + SwiftData)
-- `VideoPeekerShareExtension/`: extensão de compartilhamento
-- `VideoPeeker.xcodeproj/`: projeto Xcode
+- `VideoPeekerTranscriber/`: app principal (SwiftUI + SwiftData)
+- `VideoPeekerTranscriberTranscriberShareExtension/`: extensão de compartilhamento
+- `VideoPeekerTranscriber.xcodeproj/`: projeto Xcode
 
 ## Observações
 

@@ -1,6 +1,6 @@
 //
 //  ShareViewController.swift
-//  VideoPeekerShareExtension
+//  VideoPeekerTranscriberTranscriberShareExtension
 //
 //  Created by Gabriel Pinheiro de Carvalho on 12/02/26.
 //
@@ -10,7 +10,7 @@ import UIKit
 
 final class ShareViewController: UIViewController {
     private enum AppGroupConstants {
-        static let appGroupIdentifier = "group.com.gabrielpc4.VideoPeeker"
+        static let appGroupIdentifier = "group.com.gabrielpc4.VideoPeekerTranscriber"
 
         static let mediaFolderName = "ImportedMedia"
         static let metadataFolderName = "ImportedMetadata"
@@ -115,7 +115,7 @@ final class ShareViewController: UIViewController {
 
             await MainActor.run {
                 progressIndicator.stopAnimating()
-                statusLabel.text = "Importado. Agora abra o VideoPeeker."
+                statusLabel.text = "Importado. Agora abra o VideoPeekerTranscriber."
             }
 
             extensionContext?.completeRequest(returningItems: nil)

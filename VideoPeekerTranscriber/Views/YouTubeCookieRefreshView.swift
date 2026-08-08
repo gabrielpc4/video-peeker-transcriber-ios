@@ -1,6 +1,6 @@
 //
 //  YouTubeCookieRefreshView.swift
-//  VideoPeeker
+//  VideoPeekerTranscriber
 //
 //  Created by Assistant on 04/03/26.
 //
