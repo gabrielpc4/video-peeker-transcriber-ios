@@ -7,7 +7,7 @@ import Foundation
 
 enum AppDefaults {
     static let backendBaseUrlKey = "backendBaseUrl"
-    static let defaultBackendBaseUrl = "https://video-peeker-transcriber-backend.onrender.com"
+    static let defaultBackendBaseUrl = "https://videopeeker-backend.onrender.com"
     static let backendBaseUrlEnvKey = "VIDEOPEEKERTRANSCRIBER_BACKEND_BASE_URL"
     static let forceBackendBaseUrlEnvKey = "VIDEOPEEKERTRANSCRIBER_FORCE_BACKEND_BASE_URL"
 
