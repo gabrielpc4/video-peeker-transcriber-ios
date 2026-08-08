@@ -1,49 +1,72 @@
-# VideoPeekerTranscriber iOS
+# Video Peeker Transcriber iOS
 
-App iOS do VideoPeekerTranscriber para importar links/áudios, enviar para o backend e acompanhar transcrição/resumo/breakdown.
+Video Peeker Transcriber is an iOS app for turning videos, links, and audio files into content that is easier to understand. It was created to make it simpler to process long videos, social media links, and voice messages without having to watch or listen to everything manually.
 
-## O que o app faz
+The app brings importing, processing, and reviewing content into one workflow: share media or paste a link, let the backend download and process it, then read the transcription, summary, and structured analysis from the app.
 
-- Importa mídia compartilhada via Share Extension.
-- Permite usar link do clipboard (YouTube, Instagram, etc.).
-- Mostra status do backend e logs locais no app.
-- Exibe detalhes por item (transcrição, resumo e breakdown).
-- Inclui fluxo para atualizar cookies do YouTube direto no iPhone (via sessão web isolada).
+## Motivation
 
-## Requisitos
+Videos, reels, YouTube links, and voice messages can require significant time and attention even when someone only needs the main idea. The app reduces that friction by making the content searchable in text, highlighting important points, and helping users decide whether the full media is worth watching or listening to.
 
-- Xcode 15+
-- iOS 17+ (device ou simulador)
-- Backend do projeto rodando e acessível em rede
+## Features
 
-Backend separado: [video-peeker-transcriber-backend](https://github.com/gabrielpc4/video-peeker-transcriber-backend)
+- Import videos, links, and audio through the iOS Share Extension.
+- Support for YouTube and Instagram links, as well as audio files.
+- Automatic transcription with language detection.
+- Summaries of processed content.
+- Structured breakdowns with key points and context.
+- Per-item processing status.
+- Local history of imported content.
+- Deletion of processed items.
+- Backend connectivity and availability status.
+- In-app console logs for easier diagnostics.
+- YouTube cookie refresh directly on iPhone through an isolated web session when needed.
+- Backend URL configuration through the app or Xcode scheme environment variables.
 
-## Rodando localmente
+## Requirements
 
-1. Abra `VideoPeekerTranscriber.xcodeproj` no Xcode.
-2. Selecione o target `VideoPeekerTranscriber`.
-3. Rode no simulador ou device.
+- Xcode 15 or later
+- iOS 17 or later, on a device or simulator
+- A running backend accessible over the network
 
-## Configuração de backend
+Backend: [video-peeker-transcriber-backend](https://github.com/gabrielpc4/video-peeker-transcriber-backend)
 
-- URL padrão no app:
-  - `https://video-peeker-transcriber-backend.onrender.com`
-- Para usar backend local em device físico:
-  - abra `Settings` no app
-  - ajuste `Base URL` para o IP da sua máquina na mesma rede (ex.: `http://192.168.0.10:8000`)
+## Running locally
 
-Também existe suporte por variáveis de ambiente (útil em Schemes):
+1. Open `VideoPeekerTranscriber.xcodeproj` in Xcode.
+2. Select the `VideoPeekerTranscriber` target.
+3. Choose an iOS 17 or later simulator or device.
+4. Run the project.
+
+## Backend configuration
+
+The default public backend URL is:
+
+`https://videopeeker-backend.onrender.com`
+
+To use a local backend from a physical device:
+
+1. Open `Settings` in the app.
+2. Set `Base URL` to the IP address of the machine running the backend on the same network, for example `http://192.168.0.10:8000`.
+
+The URL can also be configured through an Xcode scheme:
 
 - `VIDEOPEEKERTRANSCRIBER_BACKEND_BASE_URL`
-- `VIDEOPEEKERTRANSCRIBER_FORCE_BACKEND_BASE_URL` (`1` ou `true`)
+- `VIDEOPEEKERTRANSCRIBER_FORCE_BACKEND_BASE_URL` (`1` or `true`)
 
-## Estrutura
+## Project structure
 
-- `VideoPeekerTranscriber/`: app principal (SwiftUI + SwiftData)
-- `VideoPeekerTranscriberTranscriberShareExtension/`: extensão de compartilhamento
-- `VideoPeekerTranscriber.xcodeproj/`: projeto Xcode
+- `VideoPeekerTranscriber/`: main SwiftUI and SwiftData app.
+- `VideoPeekerTranscriberShareExtension/`: extension for sharing content with the app.
+- `VideoPeekerTranscriber.xcodeproj/`: Xcode project.
 
-## Observações
+## Notes
 
-- O app depende do backend para processamento.
-- Alguns logs ruidosos de sistema iOS podem aparecer no console (RTI/keyboard/reporter) sem impacto funcional.
+- The app depends on the backend to download media, transcribe content, and generate analysis.
+- Processing time depends on media duration and the availability of external services.
+- Noisy iOS system logs related to the keyboard or reporter may appear in the console without indicating a functional failure.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
